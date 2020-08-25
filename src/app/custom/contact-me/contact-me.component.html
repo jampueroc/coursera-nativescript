@@ -1,0 +1,15 @@
+<ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+                ios.position="left">
+    </ActionItem>
+    <Label text="Contact Me"></Label>
+</ActionBar>
+<GridLayout class="page__content">
+    <Label class="body m-x-auto" [text]="'You can send me an email to '+ email"></Label>
+</GridLayout>
